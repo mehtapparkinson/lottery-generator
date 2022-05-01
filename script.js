@@ -17,6 +17,10 @@ function generateNumber () {
    let numberThree = Math.floor((Math.random() * 50) + 1);
    let numberFour = Math.floor((Math.random() * 50) + 1);
    let numberFive = Math.floor((Math.random() * 50) + 1);
+
+   let arrayOfNumbers = [numberOne, numberTwo, numberThree, numberFour, numberFive]
+
+
    num1.textContent = numberOne;
    num2.textContent = numberTwo;
    num3.textContent = numberThree;
@@ -24,12 +28,22 @@ function generateNumber () {
    num5.textContent = numberFive;
 }
 
+
+
+
 function generateStarNumber () {
     let starNumberOne = Math.floor((Math.random() * 12) + 1);
     let starNumberTwo = Math.floor((Math.random() * 12) + 1);
 
+    if (starNumberOne === starNumberTwo) {
+        starNumberTwo++;
+    }  
+
     star1.textContent = starNumberOne;
     star2.textContent = starNumberTwo;
+
+    
+
 }
 
 //BUTTON
